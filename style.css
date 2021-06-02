@@ -1,0 +1,210 @@
+:root {
+  --black: rgb(39, 38, 41);
+  --white: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* --------- GENERIC --------- */
+
+html,
+body {
+  font-size: 62.5%;
+}
+
+.dark-mode {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+/* --------- NAV --------- */
+nav {
+  background: var(--black);
+  height: 50px;
+}
+
+.logo {
+  float: left;
+  line-height: 50px;
+  font-size: 2rem;
+  color: var(--white);
+  margin-left: 20px;
+}
+
+.burger-icon {
+  line-height: 50px;
+  color: var(--white);
+  text-align: end;
+  margin-right: 20px;
+  font-size: 2rem;
+}
+
+.burger-icon i {
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+ul {
+  float: right;
+  position: absolute;
+  text-align: right;
+  right: -200px;
+  -webkit-transition: 0.8s ease;
+  -o-transition: 0.8s ease;
+  transition: 0.8s ease;
+  background-color: var(--white);
+  z-index: 1;
+}
+
+ul.menu-animation {
+  right: 0;
+}
+
+ul li {
+  list-style: none;
+  padding: 15px 40px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 1.6rem;
+  padding: 5px 10px;
+  border: 1px solid var(--black);
+}
+
+.dark-mode-menu {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1.6rem;
+  padding: 5px 10px;
+  border: 1px solid white;
+}
+
+.inline-menu {
+  display: none;
+}
+
+/* --------- IMAGE SLIDER --------- */
+.slides-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slide img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+
+.slide h1 {
+  position: absolute;
+  font-size: 3rem;
+  border: 2px solid black;
+  padding: 15px 18px;
+  color: black;
+  background-color: rgba(230, 209, 209, 0.726);
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* --------- MAIN --------- */
+main {
+  font-size: 2rem;
+  margin: 20px;
+}
+
+main h1 {
+  margin-bottom: 10px;
+}
+
+main p {
+  letter-spacing: 1.4px;
+  line-height: 2.5rem;
+  font-size: 1.6rem;
+}
+
+/* --------- MEDIA --------- */
+@media only screen and (min-width: 769px) {
+  i:nth-child(2) {
+    display: none;
+  }
+
+  .menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .inline-menu {
+    display: block;
+    margin-right: 20px;
+    float: right;
+  }
+
+  .inline-menu a {
+    line-height: 50px;
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    padding-left: 20px;
+  }
+
+  .burger-icon {
+    float: right;
+  }
+}
